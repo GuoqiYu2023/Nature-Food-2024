@@ -1,0 +1,79 @@
+*********************************** We used the online tool dagitty to generate the DAG
+http://www.dagitty.net/dags.html
+
+dag {
+bb="0,0,1,1"
+"Food groups" [exposure,pos="0.524,0.418"]
+"Geographical region" [pos="0.491,0.940"]
+"Healthy dietary patterns" [exposure,pos="0.539,0.699"]
+"Lipophilic chemicals (OCPs, PBDEs, PCBs)" [outcome,pos="0.819,0.439"]
+"Maternal BMI" [pos="0.397,0.038"]
+"Maternal age" [pos="0.214,0.039"]
+"Maternal education" [pos="0.166,0.549"]
+"Maternal income" [pos="0.190,0.686"]
+"Maternal race/ethnicity" [pos="0.087,0.428"]
+"Maternal smoking" [pos="0.395,0.927"]
+"Metabolic rate, fat storage" [pos="0.445,0.251"]
+"Physical activity" [pos="0.177,0.196"]
+"Total lipids" [pos="0.683,0.702"]
+"Unmeasured diet: total energy intake" [pos="0.152,0.325"]
+Chemicals [outcome,pos="0.825,0.350"]
+Parity [pos="0.249,0.798"]
+"Food groups" -> "Healthy dietary patterns"
+"Food groups" -> Chemicals
+"Food groups" <-> "Total lipids"
+"Geographical region" -> "Healthy dietary patterns"
+"Geographical region" -> Chemicals
+"Healthy dietary patterns" -> "Total lipids"
+"Healthy dietary patterns" -> Chemicals
+"Maternal BMI" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Maternal BMI" -> "Metabolic rate, fat storage"
+"Maternal BMI" -> Chemicals
+"Maternal age" -> "Food groups"
+"Maternal age" -> "Healthy dietary patterns"
+"Maternal age" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Maternal age" -> "Maternal BMI"
+"Maternal age" -> "Metabolic rate, fat storage"
+"Maternal age" -> "Physical activity"
+"Maternal age" -> Chemicals
+"Maternal education" -> "Food groups"
+"Maternal education" -> "Healthy dietary patterns"
+"Maternal education" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Maternal education" -> "Maternal smoking"
+"Maternal education" -> "Physical activity"
+"Maternal education" -> Chemicals
+"Maternal income" -> "Food groups"
+"Maternal income" -> "Healthy dietary patterns"
+"Maternal income" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Maternal income" -> "Maternal education"
+"Maternal income" -> Chemicals
+"Maternal race/ethnicity" -> "Food groups"
+"Maternal race/ethnicity" -> "Healthy dietary patterns"
+"Maternal race/ethnicity" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Maternal race/ethnicity" -> "Physical activity"
+"Maternal race/ethnicity" -> Chemicals
+"Maternal smoking" -> "Food groups"
+"Maternal smoking" -> "Healthy dietary patterns"
+"Maternal smoking" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Maternal smoking" -> Chemicals
+"Metabolic rate, fat storage" -> "Food groups"
+"Metabolic rate, fat storage" -> "Healthy dietary patterns"
+"Metabolic rate, fat storage" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Metabolic rate, fat storage" -> Chemicals
+"Physical activity" -> "Food groups"
+"Physical activity" -> "Healthy dietary patterns"
+"Physical activity" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Physical activity" -> "Maternal BMI"
+"Physical activity" -> "Metabolic rate, fat storage"
+"Total lipids" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Unmeasured diet: total energy intake" -> "Food groups"
+"Unmeasured diet: total energy intake" -> "Healthy dietary patterns"
+"Unmeasured diet: total energy intake" -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+"Unmeasured diet: total energy intake" -> Chemicals
+Parity -> "Food groups"
+Parity -> "Healthy dietary patterns"
+Parity -> "Lipophilic chemicals (OCPs, PBDEs, PCBs)"
+Parity -> Chemicals
+}
+
+Adobe Illustrator was used to modify the figure. 
