@@ -1,5 +1,5 @@
 ######################################################################################################################## generate heatmap
-################# Figure 2a
+################# Figure 4a
 setwd("C:/nus_project/1st_nus_chemical_nutrition/formal_analysis/revision02202024")
 library(pheatmap)
 library(vegan)
@@ -70,7 +70,7 @@ pdf("race_dp_chem_rawp.pdf", width = 8, height = 12)
 print(race_dp_chem_rawp)
 dev.off()
 
-################# Figure 2b
+################# Figure 4b
 setwd("C:/nus_project/1st_nus_chemical_nutrition/formal_analysis/revision02202024")
 library(pheatmap)
 library(vegan)
