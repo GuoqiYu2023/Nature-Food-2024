@@ -5,14 +5,8 @@ library(pheatmap)
 library(vegan)
 library(openxlsx)
 library(gplots)
-foodgroupforqvalue_new3=foodgroupforqvalue_new2[,c(2,3,14)]
-data_shorfrom<- reshape(data=foodgroupforqvalue_new3,idvar="Variable",
-                        v.names = "BH_allchem",
-                        timevar = "Dependent",
-                        direction="wide")
-write.xlsx(data_shorfrom,file="C:/nus_project/1st_nus_chemical_nutrition/formal_analysis/revision02202024/data_shorfrom0227.xlsx")
 
-foodgroupforqvalue_new3<- read.xlsx("data_shorfrom0227.xlsx", sheet ="figure_adjusted_p")
+foodgroupforqvalue_new3<- read.xlsx("figure_S3.xlsx", sheet ="figure_adjusted_p")
 rownames(foodgroupforqvalue_new3) <-foodgroupforqvalue_new3[,1]
 foodgroupforqvalue_new3<-foodgroupforqvalue_new3[,-1]
 foodgroupforqvalue_new3<- as.matrix(foodgroupforqvalue_new3)
@@ -43,7 +37,7 @@ library(vegan)
 library(openxlsx)
 library(gplots)
 
-foodgroupforqvalue_raw_p<- read.xlsx("data_shorfrom0304.xlsx", sheet ="figure_raw_p")
+foodgroupforqvalue_raw_p<- read.xlsx("figure_S3.xlsx", sheet ="figure_raw_p")
 rownames(foodgroupforqvalue_raw_p) <-foodgroupforqvalue_raw_p[,1]
 foodgroupforqvalue_raw_p<-foodgroupforqvalue_raw_p[,-1]
 foodgroupforqvalue_raw_p<- as.matrix(foodgroupforqvalue_raw_p)
@@ -75,7 +69,7 @@ library(openxlsx)
 library(gplots)
 
 ************************************** to add cluster analysis (tree) to heatmap based on the estimate ***********
-  foodgroupforqvalue_new3<- read.xlsx("data_shorfrom0228.xlsx", sheet ="figure_estimate")
+  foodgroupforqvalue_new3<- read.xlsx("figure_S3.xlsx", sheet ="figure_estimate")
 rownames(foodgroupforqvalue_new3) <-foodgroupforqvalue_new3[,1]
 foodgroupforqvalue_new3<-foodgroupforqvalue_new3[,-1]
 foodgroupforqvalue_new3<- as.matrix(foodgroupforqvalue_new3)
