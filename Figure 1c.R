@@ -3,7 +3,7 @@ library(pheatmap)
 library(vegan)
 library(openxlsx)
 library(gplots)
-data<- read.xlsx("combined_loading_factors0226.xlsx", sheet ="Sheet3")
+data<- read.xlsx("figure_1c.xlsx", sheet ="Sheet3")
 
 rownames(data) <- data[,1]
 data<-data[,-1]
