@@ -3,7 +3,7 @@ library(pheatmap)
 library(vegan)
 library(openxlsx)
 library(gplots)
-dp_chem<- read.xlsx("Summary_results0227.xlsx", sheet ="adjusted_TEI")
+dp_chem<- read.xlsx("figure_1a.xlsx", sheet ="adjusted_TEI")
 dp_chem=dp_chem[c(2,3,16,19,22)]
 dp_chem<-dp_chem[,-1]
 rownames(dp_chem) <-dp_chem[,1]
@@ -45,7 +45,7 @@ pdf("figure1a_dp_chem_p.pdf", width = 4, height = 14)
 print(figure1a_dp_chem_p)
 dev.off()
 
-dp_chem<- read.xlsx("Summary_results0227.xlsx", sheet ="adjusted_TEI")
+dp_chem<- read.xlsx("figure_1a.xlsx", sheet ="adjusted_TEI")
 dp_chem_rawp=dp_chem[c(2,3,7,11,15)]
 dp_chem_rawp<-dp_chem_rawp[,-1]
 rownames(dp_chem_rawp) <-dp_chem_rawp[,1]
