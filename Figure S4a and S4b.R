@@ -6,7 +6,7 @@ library(vegan)
 library(openxlsx)
 library(gplots)
 
-race_dp_chem<- read.xlsx("Summary_results0227.xlsx", sheet ="stratified_pattern")
+race_dp_chem<- read.xlsx("figure_S4a.xlsx", sheet ="stratified_pattern")
 race_dp_chem=race_dp_chem[c(3,6,9,12,15,18,21,24,27,30,33,36,39)]
 rownames(race_dp_chem) <-race_dp_chem[,1]
 race_dp_chem<-race_dp_chem[,-1]
@@ -22,7 +22,7 @@ print(figureS4a)
 dev.off()
 
 
-race_dp_chem<- read.xlsx("Summary_results0227.xlsx", sheet ="stratified_pattern")
+race_dp_chem<- read.xlsx("figure_S4a.xlsx", sheet ="stratified_pattern")
 race_dp_chem_p=race_dp_chem[c(3,5,8,11,14,17,20,23,26,29,32,35,38)]
 rownames(race_dp_chem_p) <-race_dp_chem_p[,1]
 race_dp_chem_p<-race_dp_chem_p[,-1]
@@ -46,7 +46,7 @@ pdf("race_dp_chem_p.pdf", width = 8, height = 12)
 print(race_dp_chem_p)
 dev.off()
 
-race_dp_chem<- read.xlsx("Summary_results0227.xlsx", sheet ="stratified_pattern")
+race_dp_chem<- read.xlsx("figure_S4a.xlsx", sheet ="stratified_pattern")
 race_dp_chem_rawp=race_dp_chem[c(3,4,7,10,13,16,19,22,25,28,31,34,37)]
 rownames(race_dp_chem_rawp) <-race_dp_chem_rawp[,1]
 race_dp_chem_rawp<-race_dp_chem_rawp[,-1]
@@ -76,7 +76,7 @@ library(pheatmap)
 library(vegan)
 library(openxlsx)
 library(gplots)
-dp_chemical_interaction<- read.xlsx("combined_patternscore_chemicals_interactionnew.xlsx", sheet = "combined")
+dp_chemical_interaction<- read.xlsx("figure_S4b.xlsx", sheet = "combined")
 ******************************************************************************************* to generate heatmap for raw p-value and adjusted p-value
 dp_chemical_interaction_raw=dp_chemical_interaction[,c(3:6)]
 dp_chemical_interaction_adjusted=dp_chemical_interaction[,c(3,7:9)]
