@@ -276,7 +276,7 @@ library(pheatmap)
 library(vegan)
 library(openxlsx)
 library(gplots)
-data<- read.xlsx("coef_combine1_totalchem.xlsx", sheet ="Sheet2")
+data<- read.xlsx("figure_S7a_S7b.xlsx", sheet ="Sheet2")
 
 rownames(data) <- data[,1]
 data<-data[,-1]
@@ -568,7 +568,7 @@ library(pheatmap)
 library(vegan)
 library(openxlsx)
 library(gplots)
-data<- read.xlsx("coef_combine1_totalchem_withoutnutrients.xlsx", sheet ="Sheet1")
+data<- read.xlsx("figure_S7a_S7b.xlsx", sheet ="Sheet1")
 
 rownames(data) <- data[,1]
 data<-data[,-1]
