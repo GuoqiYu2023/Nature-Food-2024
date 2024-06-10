@@ -3,7 +3,7 @@ library(pheatmap)
 library(vegan)
 library(openxlsx)
 library(gplots)
-foodgroup_chemical<- read.xlsx("Summary_results0227.xlsx", sheet = "race_foodgroups")
+foodgroup_chemical<- read.xlsx("figure_S5.xlsx", sheet = "race_foodgroups")
 var_name=read.xlsx("Summary_results0227.xlsx", sheet = "var_name")
 var_name_chem=var_name[,c(2:5)]
 var_name_food=var_name[1:30,c(6:8)]
@@ -47,7 +47,7 @@ sheets = list("data_shorfrom_race0" =data_shorfrom_race0,"data_shorfrom_race1"=d
 
 write.xlsx(sheets,file="C:/nus_project/1st_nus_chemical_nutrition/formal_analysis/revision02202024/foodgroup_chem_race.xlsx")
 
-foodgroup_race0_raw_p<- read.xlsx("foodgroup_chem_race.xlsx", sheet ="Sheet1")
+foodgroup_race0_raw_p<- read.xlsx("figure_S5.xlsx", sheet ="race0_raw_p")
 rownames(foodgroup_race0_raw_p) <-foodgroup_race0_raw_p[,1]
 foodgroup_race0_raw_p<-foodgroup_race0_raw_p[,-1]
 foodgroup_race0_raw_p<- as.matrix(foodgroup_race0_raw_p)
@@ -73,7 +73,7 @@ print(foodgroup_race0_raw_p)
 dev.off()
 
 
-foodgroup_race1_raw_p<- read.xlsx("foodgroup_chem_race.xlsx", sheet ="Sheet2")
+foodgroup_race1_raw_p<- read.xlsx("figure_S5.xlsx", sheet ="race1_raw_p")
 rownames(foodgroup_race1_raw_p) <-foodgroup_race1_raw_p[,1]
 foodgroup_race1_raw_p<-foodgroup_race1_raw_p[,-1]
 foodgroup_race1_raw_p<- as.matrix(foodgroup_race1_raw_p)
@@ -99,7 +99,7 @@ print(foodgroup_race1_raw_p)
 dev.off()
 
 
-foodgroup_race2_raw_p<- read.xlsx("foodgroup_chem_race.xlsx", sheet ="Sheet3")
+foodgroup_race2_raw_p<- read.xlsx("figure_S5.xlsx", sheet ="race2_raw_p")
 rownames(foodgroup_race2_raw_p) <-foodgroup_race2_raw_p[,1]
 foodgroup_race2_raw_p<-foodgroup_race2_raw_p[,-1]
 foodgroup_race2_raw_p<- as.matrix(foodgroup_race2_raw_p)
@@ -125,7 +125,7 @@ print(foodgroup_race2_raw_p)
 dev.off()
 
 
-foodgroup_race3_raw_p<- read.xlsx("foodgroup_chem_race.xlsx", sheet ="Sheet4")
+foodgroup_race3_raw_p<- read.xlsx("figure_S5.xlsx", sheet ="race3_raw_p")
 rownames(foodgroup_race3_raw_p) <-foodgroup_race3_raw_p[,1]
 foodgroup_race3_raw_p<-foodgroup_race3_raw_p[,-1]
 foodgroup_race3_raw_p<- as.matrix(foodgroup_race3_raw_p)
@@ -178,7 +178,7 @@ sheets = list("data_shorfrom_race0" =data_shorfrom_race0,"data_shorfrom_race1"=d
 
 write.xlsx(sheets,file="C:/nus_project/1st_nus_chemical_nutrition/formal_analysis/revision02202024/foodgroup_chem_race_adjustedPvalue.xlsx")
 
-foodgroup_race0_adjusted_p<- read.xlsx("foodgroup_chem_race_adjustedPvalue.xlsx", sheet ="Sheet1")
+foodgroup_race0_adjusted_p<- read.xlsx("figure_S5.xlsx", sheet ="race0_adjust_p")
 rownames(foodgroup_race0_adjusted_p) <-foodgroup_race0_adjusted_p[,1]
 foodgroup_race0_adjusted_p<-foodgroup_race0_adjusted_p[,-1]
 foodgroup_race0_adjusted_p<- as.matrix(foodgroup_race0_adjusted_p)
@@ -204,7 +204,7 @@ print(foodgroup_race0_adjusted_p)
 dev.off()
 
 
-foodgroup_race1_adjusted_p<- read.xlsx("foodgroup_chem_race_adjustedPvalue.xlsx", sheet ="Sheet2")
+foodgroup_race1_adjusted_p<- read.xlsx("figure_S5.xlsx", sheet ="race1_adjust_p")
 rownames(foodgroup_race1_adjusted_p) <-foodgroup_race1_adjusted_p[,1]
 foodgroup_race1_adjusted_p<-foodgroup_race1_adjusted_p[,-1]
 foodgroup_race1_adjusted_p<- as.matrix(foodgroup_race1_adjusted_p)
@@ -230,7 +230,7 @@ print(foodgroup_race1_adjusted_p)
 dev.off()
 
 
-foodgroup_race2_adjusted_p<- read.xlsx("foodgroup_chem_race_adjustedPvalue.xlsx", sheet ="Sheet3")
+foodgroup_race2_adjusted_p<- read.xlsx("figure_S5.xlsx", sheet ="race2_adjust_p")
 rownames(foodgroup_race2_adjusted_p) <-foodgroup_race2_adjusted_p[,1]
 foodgroup_race2_adjusted_p<-foodgroup_race2_adjusted_p[,-1]
 foodgroup_race2_adjusted_p<- as.matrix(foodgroup_race2_adjusted_p)
@@ -256,7 +256,7 @@ print(foodgroup_race2_adjusted_p)
 dev.off()
 
 
-foodgroup_race3_adjusted_p<- read.xlsx("foodgroup_chem_race_adjustedPvalue.xlsx", sheet ="Sheet4")
+foodgroup_race3_adjusted_p<- read.xlsx("figure_S5.xlsx", sheet ="race3_adjust_p")
 rownames(foodgroup_race3_adjusted_p) <-foodgroup_race3_adjusted_p[,1]
 foodgroup_race3_adjusted_p<-foodgroup_race3_adjusted_p[,-1]
 foodgroup_race3_adjusted_p<- as.matrix(foodgroup_race3_adjusted_p)
@@ -309,7 +309,7 @@ sheets = list("data_shorfrom_race0" =data_shorfrom_race0,"data_shorfrom_race1"=d
 
 write.xlsx(sheets,file="C:/nus_project/1st_nus_chemical_nutrition/formal_analysis/revision02202024/foodgroup_chem_race_beta.xlsx")
 library(dplyr)
-foodgroup_race_beta<- read.xlsx("foodgroup_chem_race_beta.xlsx", sheet ="Sheet1")
+foodgroup_race_beta<- read.xlsx("figure_S5.xlsx", sheet ="Sheet1")
 vars=c("chemicals","EPA+DHA_race0","EPA+DHA_race1","EPA+DHA_race2","EPA+DHA_race3","Fish_race0","Fish_race1","Fish_race2","Fish_race3","SSB.(including.juice)_race0","SSB.(including.juice)_race1","SSB.(including.juice)_race2","SSB.(including.juice)_race3","MUFA:.SFA.ratio_race0","MUFA:.SFA.ratio_race1","MUFA:.SFA.ratio_race2","MUFA:.SFA.ratio_race3")
 foodgroup_race_beta <- foodgroup_race_beta %>% select(vars)
 
@@ -318,7 +318,7 @@ foodgroup_race_beta<-foodgroup_race_beta[,-1]
 foodgroup_race_beta<- as.matrix(foodgroup_race_beta)
 
 
-foodgroup_s5_simplified<-pheatmap(
+figure_S5_simplified<-pheatmap(
   foodgroup_race_beta,border_color = "grey",
   cluster_row = FALSE,
   cluster_cols =FALSE,  angle = 315, 
@@ -327,6 +327,7 @@ foodgroup_s5_simplified<-pheatmap(
   fontsize=10,                  
   number_format = "%.2f")         
 
-pdf("foodgroup_s5_simplified.pdf", width = 10, height = 14)
-print(foodgroup_s5_simplified)
+pdf("figure_S5_simplified.pdf", width = 10, height = 14)
+print(figure_S5_simplified)
 dev.off()
+################## we then use the Adobe Illustrator to modify the figure and indicate significance according to foodgroup_race3_raw_p.pdf and foodgroup_race3_adjusted_p.pdf
